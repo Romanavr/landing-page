@@ -1,0 +1,44 @@
+@font-face {
+    font-family: AvenirNext-Regular;
+    src: url(../fonts/AvenirNext-Regular.ttf);
+}
+.wrapper {
+    margin: 0 100px;
+}
+p, span, a, div, h1, h2, h3 {
+    font-family: AvenirNext-Regular;
+}
+
+/** HEADER **/
+header {
+    height: 141px;
+    border-bottom: 1px solid #000000;
+}
+.text-around-logo {
+    font-size: 20px;
+    text-transform: uppercase;
+    white-space: nowrap ;
+}
+.header-links {
+    float: right;
+    text-align: right;
+    line-height: 1.3;
+    padding-top: 20px;
+}
+.phone-link, .mail-link {
+    color: #000000;
+}
+.phone-link {
+    font-size: 35px;
+}
+.mail-link {
+    font-size: 27px;
+}
+.working-hours {
+    font-size: 19px;
+}
+
+/** CONTACT FORM **/
+.contact-form {
+    height: 665px;
+}
