@@ -1,37 +1,342 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script async src="js/jquery-3.2.1.min.js"></script>
+    <script async src="js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <meta charset="UTF-8">
     <title>Срочные выписки из ЕГРН</title>
 </head>
 <body>
-    <header>
-        <div class="wrapper">
-            <div class="row">
-                <div class="col-lg-6">
-                    <img src="images/logo.png" height="133px" width="138px">
-                    <span class="text-around-logo">Срочные выписки и справки по недвижимости</span>
+    <div class="wrapper">
+        <header>
+                <div class="row">
+                    <div class="flex-1-2">
+                        <div class="header-logo">
+                            <img src="images/logo.png" height="133px" width="138px" align="left">
+                            <span class="text-around-logo">Срочные выписки и справки по недвижимости</span>
+                        </div>
+                    </div>
+                    <div class="flex-1-2">
+                        <p class="header-links">
+                            <a class="phone-link" href="tel:+74951111106">+7 (495) 111-11-06</a>
+                            <br>
+                            <a class="mail-link" href="mailto: zakaz@egrn.expert">zakaz@egrn.expert</a>
+                            <br>
+                            <span class="working-hours">c 09:00 до 23:00 ежедневно</span>
+                        </p>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <p class="header-links">
-                        <a class="phone-link">+7 (495) 111-11-06</a>
-                        <br>
-                        <a class="mail-link">zakaz@egrn.expert</a>
-                        <br>
-                        <span class="working-hours">c 09:00 до 23:00 ежедневно</span>
-                    </p>
+        </header>
+    </div>
+
+    <div class="wrapper">
+        <section class="feedback">
+                <div class="row">
+                    <div class="headline-feedback flex-1-2">
+                        <h1 class="headline-main" style="color: #d62026;">Выписки из ЕГРН <br></h1>
+                        <h1 class="headline-main">за 24 часа.</h1>
+                        <h1 class="headline-price">3000 ₽</h1>
+                        <img class="red-arrow" src="images/red-arrow.png" height="140px" width="230px">
+                    </div>
+                    <div class="flex-1-2">
+                        <div class="contact-form">
+                            <div class="headline-contact-form">
+                                <h3>Получить выписку ЕГРН</h3>
+                                <h4>Уже завтра!</h4>
+                            </div>
+                            <form class="fields" action="#">
+                                <div class="user-field">
+                                    <label>
+                                        <span>Имя<span class="star">*</span></span>
+                                        <input type="text">
+                                    </label>
+                                </div>
+                                <div class="user-field">
+                                    <label>
+                                        <span>Телефон<span class="star">*</span></span>
+                                        <input type="tel">
+                                    </label>
+                                </div>
+                                <div class="user-field">
+                                    <label>
+                                        <span>Кадастровый номер<span class="star">*</span></span>
+                                        <input type="text">
+                                    </label>
+                                </div>
+                                <div class="user-field">
+                                    <label>
+                                        <span>Адрес<span class="star">*</span></span>
+                                        <input type="text">
+                                    </label>
+                                </div>
+                            </form>
+                            <button class="receive">Получить выписку</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-overlay">
+                        <p class="overlay-text"><strong>Бесплатно доставим</strong> вам официальные документы с печатью Росреестра уже <strong>на следующий день</strong> после обращения к нам!</p>
+                </div>
+        </section>
+    </div>
+
+    <div class="wrapper">
+        <section class="work-order">
+            <h2 class="wo-headline">Порядок работы</h2>
+            <div class="row work-order-images" style="flex-direction: row">
+
+                <div class="flex-1-7">
+                <img class="icon-image" src="images/icon-1.png">
+                    <h3 class="text-icon-headline">Завяка или звонок</h3>
+                    <p class="text-icon">Оставьте заявку на нашем сайте! Наш менеджер свяжется с вами для уточнения деталей.</p>
+                </div>
+                <div class="flex-1-7">
+                    <img class="icon-image" src="images/between-arrow.png">
+                </div>
+                <div class="flex-1-7">
+                    <img class="icon-image" src="images/icon-2.png">
+                    <h3 class="text-icon-headline">Уточнение деталей</h3>
+                    <p class="text-icon">Уточнение деталей по объекту недвижимости, адреса доставки, сроках оформления документа и стоимости заказа.</p>
+                </div>
+                <div class="flex-1-7">
+                    <img class="icon-image" src="images/between-arrow.png">
+                </div>
+                <div class="flex-1-7">
+                    <img class="icon-image" src="images/icon-3.png">
+                    <h3 class="text-icon-headline">Оформление выписки</h3>
+                    <p class="text-icon">Наши специалисты заказывают и получают выписку в Росреестре в течение 24 часов.</p>
+                </div>
+                <div class="flex-1-7">
+                    <img class="icon-image" src="images/between-arrow.png">
+                </div>
+                <div class="flex-1-7">
+                    <img class="icon-image" src="images/icon-4.png">
+                    <h3 class="text-icon-headline">Доставка и оплата</h3>
+                    <p class="text-icon">Курьер бесплатно доставляет выписку в оговоренное место и вы оплачивайте услугу.</p>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+    <div class="wrapper">
+        <section class="services">
+            <h3 class="service-headline">Заказать документы</h3>
+            <h4 class="service-sub-headline">Официальные выписки и справки по объектам недвижимости по:</h4>
+            <div style="text-align: center">
+                <div class="regions">
+                    <a class="choose-region">Москва</a><a class="choose-region">Московская область</a><a class="choose-region">Другие регионы</a>
                 </div>
             </div>
-        </div>
-    </header>
-    <!--<section class="contact-form">-->
-        <!--<div class="wrapper">-->
-            <!---->
-        <!--</div>-->
-    <!--</section>-->
+            <div class="row">
+                <div class="service-frame flex-1-3">
+                    <img src="images/service-icon-1.png" width="220px" height="185px">
+                    <div class="service-frame-headline">
+                        <h4>Выписка из ЕГРН</h4>
+                        <h5>об объекте недвижимости</h5>
+                    </div>
+                    <ul class="service-frame-list">
+                        <li>бесплатная доставка</li>
+                        <li>любой объект по Москве</li>
+                    </ul>
+                    <p><a href="#">С печастью</a>/<a> Без печати</a></p>
+                    <strong>3000 ₽</strong>
+                    <a href="#" class="service-order">Заказать</a>
+                </div>
+                <div class="service-frame flex-1-3">
+                    <img src="images/service-icon-2.png" width="220px" height="185px">
+                    <div class="service-frame-headline">
+                        <h4>Выписка из ЕГРН</h4>
+                        <h5>о переходе прав</h5>
+                    </div>
+                    <ul class="service-frame-list">
+                        <li>бесплатная доставка</li>
+                        <li>любой объект по Москве</li>
+                    </ul>
+                    <p><a href="#">С печастью</a>/<a> Без печати</a></p>
+                    <strong>3000 ₽</strong>
+                    <a href="#" class="service-order">Заказать</a>
+                </div>
+                <div class="service-frame flex-1-3">
+                    <img src="images/service-icon-3.png" width="220px" height="185px">
+                    <div class="service-frame-headline">
+                        <h4>Выписка из ЕГРН</h4>
+                        <h5>о правах отдельного лица</h5>
+                    </div>
+                    <ul class="service-frame-list">
+                        <li>бесплатная доставка</li>
+                        <li>о наличии/отсутствии недвижимости</li>
+                    </ul>
+                    <p><a href="#">С печастью</a>/<a> Без печати</a></p>
+                    <strong>3000 ₽</strong>
+                    <a href="#" class="service-order">Заказать</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="service-frame flex-1-3">
+                    <img src="images/service-icon-4.png" width="220px" height="185px">
+                    <div class="service-frame-headline">
+                        <h4>Выписка из ЕГРН</h4>
+                        <h5>о кадостровой стоимости</h5>
+                    </div>
+                    <ul class="service-frame-list">
+                        <li>бесплатная доставка</li>
+                        <li>указание стоимости на любую дату</li>
+                    </ul>
+                    <p><a href="#">С печастью</a>/<a> Без печати</a></p>
+                    <strong>3000 ₽</strong>
+                    <a href="#" class="service-order">Заказать</a>
+                </div>
+                <div class="service-frame flex-1-3">
+                    <img src="images/service-icon-5.png" width="200px" height="185px">
+                    <div class="service-frame-headline">
+                        <h4>Выписка домовой книги</h4>
+                        <h5>архивная/из домовой книги</h5>
+                    </div>
+                    <ul class="service-frame-list">
+                        <li>бесплатная доставка</li>
+                        <li>любой объект по Москве</li>
+                    </ul>
+                    <p><a href="#">С печастью</a>/<a> Без печати</a></p>
+                    <strong>7000 ₽</strong>
+                    <a href="#" class="service-order">Заказать</a>
+                </div>
+                <div class="service-frame flex-1-3">
+                    <img src="images/service-icon-6.png" width="200px" height="185px">
+                    <div class="service-frame-headline">
+                        <h4>Документы БТИ</h4>
+                        <h5>технический паспорт поэтажный план и экспликация</h5>
+                    </div>
+                    <ul class="service-frame-list">
+                        <li>бесплатная доставка</li>
+                        <li>любой объект по Москве</li>
+                    </ul>
+                    <p><a href="#">С печастью</a>/<a> Без печати</a></p>
+                    <strong>8000 ₽</strong>
+                    <a href="#" class="service-order">Заказать</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="service-frame flex-1-3">
+                    <img src="images/service-icon-7.png" width="200px" height="200px">
+                    <div class="service-frame-headline">
+                        <h4>Регистрация сделок с недвижимостью</h4>
+                    </div>
+                    <ul class="service-frame-list">
+                        <li>подача и полный контроль документов</li>
+                        <li>выезд на сделку</li>
+                        <li>подача документов в РОСРЕЕСТР</li>
+                    </ul>
+                    <strong>от 9000 ₽</strong>
+                    <a href="#" class="service-order">Заказать</a>
+                </div>
+                <div class="service-frame flex-1-3">
+                    <img src="images/service-icon-8.png" width="200px" height="200px">
+                    <div class="service-frame-headline">
+                        <h4>Выписка из ЕГРЮЛ и ЕГРИП</h4>
+                    </div>
+                    <ul class="service-frame-list">
+                        <li>информация из реестра юридических лиц и индивидуальных предпренимателей</li>
+                    </ul>
+                    <p><a href="#">С печастью</a>/<a> Без печати</a></p>
+                    <strong>от 10000 ₽</strong>
+                    <a href="#" class="service-order">Заказать</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="wrapper">
+        <section class="feedback-order">
+            <div class="feedback-order-headline">
+                <h2>Получите выписку ЕГРН уже завтра!</h2>
+                <h4>Оставьте заявку на получение выписки и наш менеджмер свяжется с вами в течение 15 минут</h4>
+            </div>
+            <form action="#">
+                <div class="row order-form">
+                    <input class="flex-1-5" type="text" placeholder="Имя*">
+                    <input class="flex-1-5" type="tel" placeholder="Телефон*">
+                    <input class="flex-1-5" type="text" placeholder="Что требуется?*">
+                    <input class="flex-1-5" type="text" placeholder="Что требуется?*">
+                    <button class="order-button">Заказать</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <div class="wrapper">
+        <section class="review">
+            <h2 class="review-headline">Что о нас говорят клиенты?</h2>
+            <div class="row reviews">
+                <div class="comment flex-1-3">
+                    <div class="comment-text">
+                        <p>Я в восторге! Быстро, качественно и надежно. Сама бы я вряд ли успела бы оформить все документы. Спасибо!</p>
+                        <div style="line-height: 0.2">
+                            <p><strong>Анна Петрова</strong></p>
+                            <p style="color: #d62026">Педагог</p>
+                        </div>
+                    </div>
+                    <img class="comment-icon" src="images/comment-icon.png">
+                </div>
+                <div class="comment flex-1-3">
+                    <div class="comment-text">
+                        <p>Я в восторге! Быстро, качественно и надежно. Сама бы я вряд ли успела бы оформить все документы. Спасибо!</p>
+                        <div style="line-height: 0.2">
+                            <p><strong>Анна Петрова</strong></p>
+                            <p style="color: #d62026">Педагог</p>
+                        </div>
+                    </div>
+                    <img class="comment-icon" src="images/comment-icon.png">
+                </div>
+                <div class="comment flex-1-3">
+                    <div class="comment-text">
+                        <p>Я в восторге! Быстро, качественно и надежно. Сама бы я вряд ли успела бы оформить все документы. Спасибо!</p>
+                        <div style="line-height: 0.2">
+                            <p><strong>Анна Петрова</strong></p>
+                            <p style="color: #d62026">Педагог</p>
+                        </div>
+                    </div>
+                    <img class="comment-icon" src="images/comment-icon.png">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="wrapper">
+       <section class="map">
+            <!--<div class="map-info">-->
+                <!--<div class="map-address">-->
+                    <!--<h4>Москва</h4>-->
+                    <!--<p>Николькая дом 10 стр.2, офис 315</p>-->
+                <!--</div>-->
+                <!--<a class="map-tel-link" style="" href="tel: +749511111-6"><i style="color: #d62026" class="fa fa-phone"></i> <strong>+7 (495) 111-11-06</strong></a>-->
+            <!--</div>-->
+           <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afce54dbcbae9033db6cee32a80a8654a0d259163d32101e5bffe03e9add3ffcf&amp;width=1260&amp;height=530&amp;lang=ru_RU&amp;scroll=true"></script>
+       </section>
+    </div>
+
+    <div class="wrapper">
+        <footer>
+            <div class="row">
+                <div class="footer-logo flex-1-2">
+                    <img src="images/logo.png" height="100px" width="100px">
+                </div>
+                <div class="footer-links flex-1-2">
+                    <a class="phone-link" href="tel:+74951111106">+7 (495) 111-11-06</a>
+                    <br>
+                    <a class="mail-link" href="mailto: zakaz@egrn.expert">zakaz@egrn.expert</a>
+                    <br>
+                    <span class="working-hours">c 09:00 до 23:00 ежедневно</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
 </body>
 </html>
