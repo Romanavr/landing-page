@@ -24,3 +24,18 @@ YMaps.jQuery(function () {
         // Добавляет метку на карту
         map.addOverlay(placemark);
 });
+
+jQuery(document).ready(function() {
+        jQuery('.moscow').click(function() {
+                jQuery('.group-moscow, .moscow').addClass('active');
+                jQuery('.group-mo, .group-other, .mo, .other').removeClass('active');
+        });
+        jQuery('.mo').click(function() {
+                jQuery('.group-mo, .mo').addClass('active');
+                jQuery('.group-moscow, .group-other, .moscow, .other').removeClass('active');
+        });
+        jQuery('.other').click(function() {
+                jQuery('.group-other, .other').addClass('active');
+                jQuery('.group-moscow, .group-mo, .moscow, .mo').removeClass('active');
+        });
+});
