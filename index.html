@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script async src="js/jquery-3.2.1.min.js"></script>
+    <script  src="js/jquery-3.2.1.min.js"></script>
     <script async src="js/bootstrap.min.js"></script>
     <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+    <script src="js/ajax-contact.js"></script>
     <script src="js/script.js"></script>
     <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/style.css">
@@ -37,9 +38,9 @@
                 <div class="row">
                     <div class="headline-feedback flex-1-2">
                         <h1 class="headline-main" style="color: #d62026;">Выписки из ЕГРН <br></h1>
-                        <h1 class="headline-main">за 24 часа.</h1>
+                        <h1 class="headline-main">за 24 часа</h1>
                         <h1 class="headline-price">3000 ₽</h1>
-                        <img class="red-arrow" src="images/red-arrow.png" height="140px" width="230px">
+                        <img class="red-arrow" src="images/title-arrow.svg" >
                     </div>
                     <div class="flex-1-2">
                         <div class="contact-form">
@@ -47,29 +48,29 @@
                                 <h3>Получить выписку ЕГРН</h3>
                                 <h4>Уже завтра!</h4>
                             </div>
-                            <form class="fields" action="#">
+                            <form class="fields" method="post" action="feedback/feedback-mail.php" data-ajax-form>
                                 <div class="user-field">
                                     <label>
                                         <span>Имя<span class="star">*</span></span>
-                                        <input type="text">
+                                        <input name="first_name" type="text" required>
                                     </label>
                                 </div>
                                 <div class="user-field">
                                     <label>
                                         <span>Телефон<span class="star">*</span></span>
-                                        <input type="tel">
+                                        <input name="phone" type="tel" required>
                                     </label>
                                 </div>
                                 <div class="user-field">
                                     <label>
                                         <span>Кадастровый номер<span class="star">*</span></span>
-                                        <input type="text">
+                                        <input name="cad_num" type="text" required>
                                     </label>
                                 </div>
                                 <div class="user-field">
                                     <label>
                                         <span>Адрес<span class="star">*</span></span>
-                                        <input type="text">
+                                        <input name="address" type="text" required>
                                     </label>
                                 </div>
                             </form>
@@ -393,14 +394,15 @@
                 <h2>Получите выписку ЕГРН уже завтра!</h2>
                 <h4>Оставьте заявку на получение выписки и наш менеджмер свяжется с вами в течение 15 минут</h4>
             </div>
-            <form action="#">
+            <form method="post" action="feedback/feedback-mail.php" data-ajax-form>
                 <div class="row order-form">
-                    <input class="flex-1-5" type="text" placeholder="Имя*">
-                    <input class="flex-1-5" type="tel" placeholder="Телефон*">
-                    <input class="flex-1-5" type="text" placeholder="Что требуется?*">
-                    <input class="flex-1-5" type="text" placeholder="Что требуется?*">
-                    <button class="order-button">Заказать</button>
+                    <input name="first_name" required class="flex-1-5" type="text" placeholder="Имя*">
+                    <input name="phone" required class="flex-1-5" type="tel" placeholder="Телефон*">
+                    <input name="message" required class="flex-1-5" type="text" placeholder="Что требуется?*">
+                    <input name="message" required class="flex-1-5" type="text" placeholder="Что требуется?*">
+                    <button class="order-button" type="submit" >Заказать</button>
                 </div>
+                <div class="overlay"></div>
             </form>
         </section>
 

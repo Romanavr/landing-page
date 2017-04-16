@@ -38,4 +38,6 @@ jQuery(document).ready(function() {
                 jQuery('.group-other, .other').addClass('active');
                 jQuery('.group-moscow, .group-mo, .moscow, .mo').removeClass('active');
         });
+        
+
 });
