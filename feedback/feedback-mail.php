@@ -8,8 +8,8 @@ function sendSms($text) {
 }
 function sendEmail($data) {
     $mail = new PHPMailer;
-    $mail->SMTPDebug = 3;
-//    $mail->isSMTP();
+//    $mail->SMTPDebug = 3;
+    $mail->isSMTP();
     $mail->CharSet = EMAIL_CHARSET;
     $mail->Host = EMAIL_SENDER_SMTP_HOST;
     $mail->SMTPAuth = true;
