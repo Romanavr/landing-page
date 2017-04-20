@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/> <!-- Фавикон -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/> <!-- Фавикон -->
+
     <script  src="js/jquery-3.2.1.min.js"></script>
-    <script async src="js/bootstrap.min.js"></script>
     <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
     <script src="js/ajax-contact.js"></script>
     <script src="js/script.js"></script>
-    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link rel='stylesheet' href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+
     <meta charset="UTF-8">
     <title>Срочные выписки из ЕГРН</title>
 </head>
@@ -36,13 +42,12 @@
 
         <section class="feedback">
                 <div class="row">
-                    <div class="headline-feedback flex-1-2">
-                        <h1 class="headline-main" style="color: #d62026;">Выписки из ЕГРН <br></h1>
-                        <h1 class="headline-main">за 24 часа</h1>
-                        <h1 class="headline-price">3000 ₽</h1>
-                        <img class="red-arrow" src="images/title-arrow.svg" >
+                    <div class="headline-feedback">
+                        <img class="red-arrow" src="images/red-arrow.svg" >
+                        <img class="red-arrow-adaptive" src="images/red-arrow-adaptive.svg">
+                        <h1 class="headline-price ff-open-sans">3000 ₽</h1>
                     </div>
-                    <div class="flex-1-2">
+                    <div class="">
                         <div class="contact-form">
                             <div class="headline-contact-form">
                                 <h3>Получить выписку ЕГРН</h3>
@@ -85,36 +90,43 @@
 
         <section class="work-order">
             <h2 class="wo-headline">Порядок работы</h2>
-            <div class="row work-order-images" style="flex-direction: row">
+            <div class="row work-order-images">
 
                 <div class="flex-1-4">
-                <img class="icon-image" src="images/icon-1.png">
-                    <h3 class="text-icon-headline">Завяка или звонок</h3>
-                    <p class="text-icon">Оставьте заявку на нашем сайте! Наш менеджер свяжется с вами для уточнения деталей.</p>
-                </div>
-                <div class="between-arrow">
-                    <img class="icon-image" src="images/between-arrow.png">
-                </div>
-                <div class="flex-1-4">
-                    <img class="icon-image" src="images/icon-2.png">
-                    <h3 class="text-icon-headline">Уточнение деталей</h3>
-                    <p class="text-icon">Уточнение деталей по объекту недвижимости, адреса доставки, сроках оформления документа и стоимости заказа.</p>
-                </div>
-                <div class="between-arrow">
-                    <img class="icon-image" src="images/between-arrow.png">
+                    <div class="work-order-item">
+                        <div class="work-order-item-icon">
+                            <img class="icon-image" src="images/icon-1.png">
+                        </div>
+                        <h3 class="text-icon-headline">Завяка или звонок</h3>
+                        <p class="text-icon">Оставьте заявку на нашем сайте! Наш менеджер свяжется с вами для уточнения деталей.</p>
+                    </div>
                 </div>
                 <div class="flex-1-4">
-                    <img class="icon-image" src="images/icon-3.png">
-                    <h3 class="text-icon-headline">Оформление выписки</h3>
-                    <p class="text-icon">Наши специалисты заказывают и получают выписку в Росреестре в течение 24 часов.</p>
-                </div>
-                <div class="between-arrow">
-                    <img class="icon-image" src="images/between-arrow.png">
+                    <div class="work-order-item">
+                        <div class="work-order-item-icon">
+                            <img class="icon-image" src="images/icon-2.png">
+                        </div>
+                        <h3 class="text-icon-headline">Уточнение деталей</h3>
+                        <p class="text-icon">Уточнение деталей по объекту недвижимости, адреса доставки, сроках оформления документа и стоимости заказа.</p>
+                    </div>
                 </div>
                 <div class="flex-1-4">
-                    <img class="icon-image" src="images/icon-4.png">
-                    <h3 class="text-icon-headline">Доставка и оплата</h3>
-                    <p class="text-icon">Курьер бесплатно доставляет выписку в оговоренное место и вы оплачивайте услугу.</p>
+                    <div class="work-order-item">
+                        <div class="work-order-item-icon">
+                            <img class="icon-image" src="images/icon-3.png">
+                        </div>
+                        <h3 class="text-icon-headline">Оформление выписки</h3>
+                        <p class="text-icon">Наши специалисты заказывают и получают выписку в Росреестре в течение 24 часов.</p>
+                    </div>
+                </div>
+                <div class="flex-1-4">
+                    <div class="work-order-item">
+                        <div class="work-order-item-icon">
+                            <img class="icon-image" src="images/icon-4.png">
+                        </div>
+                        <h3 class="text-icon-headline">Доставка и оплата</h3>
+                        <p class="text-icon">Курьер бесплатно доставляет выписку в оговоренное место и вы оплачивайте услугу.</p>
+                    </div>
                 </div>
 
             </div>
@@ -126,7 +138,7 @@
             <h4 class="service-sub-headline">Официальные выписки и справки по объектам недвижимости по:</h4>
             <div style="text-align: center">
                 <div class="regions">
-                    <a class="choose-region moscow">Москва</a><a class="choose-region mo">Московская область</a><a class="choose-region other">Другие регионы</a>
+                    <a class="choose-region moscow active">Москва</a><a class="choose-region mo">Московская область</a><a class="choose-region other">Другие регионы</a>
                 </div>
             </div>
 
@@ -395,12 +407,12 @@
                 <h4>Оставьте заявку на получение выписки и наш менеджмер свяжется с вами в течение 15 минут</h4>
             </div>
             <form method="post" action="feedback/feedback-mail.php" data-ajax-form>
-                <div class="row order-form">
-                    <input name="first_name" required class="flex-1-5" type="text" placeholder="Имя*">
-                    <input name="phone" required class="flex-1-5" type="tel" placeholder="Телефон*">
-                    <input name="message" required class="flex-1-5" type="text" placeholder="Что требуется?*">
-                    <input name="message" required class="flex-1-5" type="text" placeholder="Что требуется?*">
-                    <button class="order-button" type="submit" >Заказать</button>
+                <div class="order-form">
+                    <input name="first_name" required class="flex-1-6" type="text" placeholder="Имя*">
+                    <input name="phone" required class="flex-1-6" type="tel" placeholder="Телефон*">
+                    <input name="message" required class="flex-1-6" type="text" placeholder="Что требуется?*">
+                    <input name="message" required class="flex-1-6" type="text" placeholder="Что требуется?*">
+                    <button class="order-button flex-1-6" type="submit" >Заказать</button>
                 </div>
                 <div class="overlay"></div>
             </form>
@@ -455,8 +467,6 @@
                     <a class="phone-link" href="tel:+74951111106">+7 (495) 111-11-06</a>
                     <br>
                     <a class="mail-link" href="mailto: zakaz@egrn.expert">zakaz@egrn.expert</a>
-                    <br>
-                    <span class="working-hours">c 09:00 до 23:00 ежедневно</span>
                 </div>
             </div>
         </footer>

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/muller/muller_bold-webfont.eot');
+    src: url('../fonts/muller/muller_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/muller/muller_bold-webfont.woff2') format('woff2'),
+         url('../fonts/muller/muller_bold-webfont.woff') format('woff'),
+         url('../fonts/muller/muller_bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/muller/muller_regular-webfont.eot');
+    src: url('../fonts/muller/muller_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/muller/muller_regular-webfont.woff2') format('woff2'),
+         url('../fonts/muller/muller_regular-webfont.woff') format('woff'),
+         url('../fonts/muller/muller_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
