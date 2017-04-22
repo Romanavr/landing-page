@@ -8,6 +8,9 @@ YMaps.jQuery(function () {
         // Создаем очень уникальную-метку по дизайну Артема Лебдева
         var s = new YMaps.Style();
         s.iconStyle = new YMaps.IconStyle();
+        s.hintContentStyle = new YMaps.HintContentStyle(
+            new YMaps.Template("<b>$[name]</b><div>$[description]</div>")
+        );
 
         // Делаем её размеры и пропорции по феншую
         s.iconStyle.href = 'images/map-label.png';
@@ -15,7 +18,8 @@ YMaps.jQuery(function () {
         s.iconStyle.offset = new YMaps.Point(-20, -70);
 
         // Создает уникальную метку в центре Москвы
-        var placemark = new YMaps.Placemark(new YMaps.GeoPoint(37.632706,55.758658), {style: s});
+
+        var placemark = new YMaps.Placemark(new YMaps.GeoPoint(37.632706,55.758658), {hasHint: true, style: s});
 
         // Устанавливаем уникальное содержимое балуна
         placemark.name = "Москва";
@@ -38,6 +42,6 @@ jQuery(document).ready(function() {
                 jQuery('.group-other, .other').addClass('active');
                 jQuery('.group-moscow, .group-mo, .moscow, .mo').removeClass('active');
         });
-        
+
 
 });
