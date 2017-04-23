@@ -40,12 +40,15 @@ if (isset($_POST['submit'])) {
         $phone = strip_tags($_POST['phone']);
         $message = strip_tags($_POST['message']);
         $cad_num = strip_tags($_POST['cad_num']);
+        $service_modal = strip_tags($_POST['service-modal']);
+        $service_name = strip_tags($_POST['service-name']);
+        $service_price = strip_tags($_POST['service-price']);
         $ip = filter_var($_SERVER['REMOTE_ADDR'], FILTER_VALIDATE_IP);
         $message_date = date("Y-m-d H:i:s");
         $email_result = sendEmail(array(
             'to' => 'ask@palladium.travel',
             'subject' => "Новое сообщение обратной связи с сайта 'Срочные выписки из ЕГРН'",
-            'body' => "Здравствуйте. Вам было отправлено сообщение с сайта 'Срочные выписки из ЕГРН' с помощью обратной связи. Оно содержит следующие данные: <br> Имя: $name <br> Контакты: $phone <br> Вопрос: $message <br>, Кадастровый номер: $cad_num IP: $ip <br> Время отправки: $message_date",
+            'body' => "Здравствуйте. Вам было отправлено сообщение с сайта 'Срочные выписки из ЕГРН' с помощью обратной связи. Оно содержит следующие данные: <br> Имя: $name <br> Контакты: $phone <br> Вопрос: $message <br>, Кадастровый номер: $cad_num <br> Название услуги: $service_name <br> Цена услуги: $service_price <br> Название IP: $ip <br> Время отправки: $message_date"  ,
             'altBody' => "Здравствуйте. Вам было отправлено сообщение с сайта 'Срочные выписки из ЕГРН' с помощью обратной связи. Оно содержит следующие данные: Имя: $name Контакты: $phone Вопрос: $message Кадастровый номер: $cad_num IP: $ip Время отправки: $message_date"
         ));
         $response['error'] = false;
