@@ -43,14 +43,24 @@ if (isset($_POST['submit'])) {
         $service_modal = strip_tags($_POST['service-modal']);
         $service_name = strip_tags($_POST['service-name']);
         $service_price = strip_tags($_POST['service-price']);
+        $stamp = strip_tags($_POST['stamp']);
         $ip = filter_var($_SERVER['REMOTE_ADDR'], FILTER_VALIDATE_IP);
         $message_date = date("Y-m-d H:i:s");
+        if($service_modal) {
         $email_result = sendEmail(array(
             'to' => 'ask@palladium.travel',
             'subject' => "Новое сообщение обратной связи с сайта 'Срочные выписки из ЕГРН'",
             'body' => "Здравствуйте. Вам было отправлено сообщение с сайта 'Срочные выписки из ЕГРН' с помощью обратной связи. Оно содержит следующие данные: <br> Имя: $name <br> Контакты: $phone <br> Вопрос: $message <br>, Кадастровый номер: $cad_num <br> Название услуги: $service_name <br> Цена услуги: $service_price <br> Название IP: $ip <br> Время отправки: $message_date"  ,
-            'altBody' => "Здравствуйте. Вам было отправлено сообщение с сайта 'Срочные выписки из ЕГРН' с помощью обратной связи. Оно содержит следующие данные: Имя: $name Контакты: $phone Вопрос: $message Кадастровый номер: $cad_num IP: $ip Время отправки: $message_date"
+            'altBody' => "Здравствуйте. Вам было отправлено сообщение с сайта 'Срочные выписки из ЕГРН' с помощью обратной связи. Оно содержит следующие данные: Имя: $name Контакты: $phone Вопрос: $message Кадастровый номер: $cad_num Название услуги: $service_name Цена услуги: $service_price IP: $ip Время отправки: $message_date"
         ));
+        } else {
+            $email_result = sendEmail(array(
+                'to' => 'ask@palladium.travel',
+                'subject' => "Новое сообщение обратной связи с сайта 'Срочные выписки из ЕГРН'",
+                'body' => "Здравствуйте. Вам было отправлено сообщение с сайта 'Срочные выписки из ЕГРН' с помощью обратной связи. Оно содержит следующие данные: <br> Имя: $name <br> Контакты: $phone <br> Вопрос: $message <br>, Кадастровый номер: $cad_num <br> Название IP: $ip <br> Время отправки: $message_date"  ,
+                'altBody' => "Здравствуйте. Вам было отправлено сообщение с сайта 'Срочные выписки из ЕГРН' с помощью обратной связи. Оно содержит следующие данные: Имя: $name Контакты: $phone Вопрос: $message Кадастровый номер: $cad_num IP: $ip Время отправки: $message_date"
+            ));
+        }
         $response['error'] = false;
         $response['message'] = "Благодарим вас, ваше сообщение было успешно отправлено! Наши менеджеры свяжутся с вами в ближайшее время.";
     } else {

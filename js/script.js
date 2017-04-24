@@ -1,37 +1,4 @@
-YMaps.jQuery(function () {
-        // Создает экземпляр карты и привязывает его к созданному контейнеру
-        var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
 
-        // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
-        map.setCenter(new YMaps.GeoPoint(37.632726, 55.758809), 15);
-
-        // Создаем очень уникальную-метку по дизайну Артема Лебдева
-        var s = new YMaps.Style();
-        s.iconStyle = new YMaps.IconStyle();
-        s.hintContentStyle = new YMaps.HintContentStyle(
-            new YMaps.Template("<b>$[name]</b><div>$[description]</div>")
-        );
-
-        s.balloonContentStyle = new YMaps.BalloonContentStyle(
-            new YMaps.Template("<div style=\"color:#0A0\">$[description]</div>")
-        );
-
-        // Делаем её размеры и пропорции по феншую
-        s.iconStyle.href = 'images/map-label.png';
-        s.iconStyle.size = new YMaps.Point(60, 80);
-        s.iconStyle.offset = new YMaps.Point(-20, -70);
-
-        // Создает уникальную метку в центре Москвы
-
-        var placemark = new YMaps.Placemark(new YMaps.GeoPoint(37.632706,55.758658), {hasHint: true, style: s});
-
-        // Устанавливаем уникальное содержимое балуна
-        placemark.name = "Москва";
-        placemark.description = "Никольная дом 10 стр.2, офис 315. <p><a class='map-tel-link' href='tel: +7-495-111-11-06'><i style='color: #d62026' class='fa fa-phone'></i><strong>+7 (495) 111-11-06</strong></a></p>";
-
-        // Добавляет метку на карту
-        map.addOverlay(placemark);
-});
 
 jQuery(document).ready(function() {
         jQuery('.moscow').click(function() {
@@ -75,17 +42,33 @@ jQuery(document).ready(function() {
 //                         modal.style.display = "none";
 //                 }
 //         }
+        
+        
+        jQuery('.stamp-true').click(function() {
+                jQuery(this).addClass("active");
+                jQuery(".stamp-false").removeClass("active");
+                jQuery(".service-order").attr("data-stamp", "С печатью");
+        });
+        jQuery('.stamp-false').click(function() {
+                jQuery(this).addClass("active");
+                jQuery(".stamp-true").removeClass("active");
+                jQuery(".service-order").attr("data-stamp", "Без печати");
+        });
 
         jQuery('.myBtn').click(function() {
            jQuery('#myModal').show();
                 var serviceName = jQuery(this).attr('data-service-name');
                 var servicePrice = jQuery(this).attr('data-service-price');
+                var stamp = jQuery(this).attr('data-stamp');
+                // var stamp = jQuery("").attr('data-service-price');
                 jQuery("input[name='service-name']").val(serviceName);
                 jQuery("input[name='service-price']").val(servicePrice);
+                jQuery("input[name='stamp']").val(stamp);
         });
         jQuery("span").click(function() {
                 jQuery('#myModal').hide();
         });
+
         // END
 
 });

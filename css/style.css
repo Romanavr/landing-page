@@ -58,11 +58,12 @@
     text-align: center;
     padding: 10px 0;
     line-height: 1.5;
+    width: 100%;
 }
 .modal-content > label > input {
     border: 2px solid #cfd2d2;
     background: #cfd2d2;
-    width: 250px;
+    width: 50%;
     padding: 7px 10px;
 }
 .modal-submit {
@@ -73,7 +74,8 @@
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
-    padding: 10px 60px;
+    padding: 10px 0;
+    width: 45%;
     margin-top: 25px;
 }
 .modal-submit:hover {
@@ -81,7 +83,7 @@
     text-decoration: underline;
 }
 /* The Close Button */
-.close {
+.modal-close {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -89,8 +91,8 @@
     align-self: flex-end;
 }
 
-.close:hover,
-.close:focus {
+.modal-close:hover,
+.modal-close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -442,6 +444,12 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
     color: #0000ff;
     text-decoration: underline;
 }
+.stamp-true.active, .stamp-true:hover, .stamp-false.active, .stamp-false:hover {
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+
 .service-frame > p {
     color: #646464;
 }
@@ -597,6 +605,31 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
     text-decoration: underline;
 }
 
+.close {
+    position: relative;
+    top: 35px;
+    text-decoration: none;
+    font-size: 25px;
+    left: 200px;
+    color: #000000;
+    z-index: 1000;
+}
+.popover-title {
+    background: #ffffff;
+    margin: 0;
+    text-align: center;
+    padding: 20px 20px 0 20px;
+    opacity: 0.8;
+}
+.popover-content {
+    background: #ffffff;
+    margin: 0;
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    opacity: 0.8;
+}
+
+
 /** FOOTER **/
 footer {
     background: #eaeaea;
@@ -703,6 +736,9 @@ footer {
 
     .service-frame-list {
         text-align: left;
+    }
+    .modal-content {
+        width: 70%;
     }
 
     .feedback-order {

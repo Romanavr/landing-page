@@ -8,10 +8,11 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/> <!-- Фавикон -->
 
     <script  src="js/jquery-3.2.1.min.js"></script>
-    <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug" type="text/javascript"></script>
     <script src="js/ajax-contact.js"></script>
     <script src="js/input-mask.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/map.js"></script>
 
     <link rel='stylesheet' href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -149,7 +150,7 @@
                 <form method="post" action="feedback/feedback-mail.php" data-ajax-form="">
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <span class="close">&times;</span>
+                    <span class="modal-close">&times;</span>
                     <h2>Оставьте контактные данные, мы Вам перезвоним</h2>
                     <label>
                         <span>Имя<span class="star">*</span></span>
@@ -172,6 +173,7 @@
                     <input type="hidden" name="service-modal" value="1">
                     <input type="hidden" name="service-name" value="">
                     <input type="hidden" name="service-price" value="">
+                    <input type="hidden" name="stamp" value="">
                     <button class="modal-submit" type="submit">Отправить</button>
                 </div>
                 </form>
@@ -180,7 +182,6 @@
 
             <div class="group-moscow active">
                 <div class="row">
-                    <form method="post" action="feedback/feedback-mail.php" data-ajax-form>
                         <div class="service-frame flex-1-3">
                             <img src="images/service-icon-1.png" width="170px" height="auto">
                             <div class="service-frame-headline">
@@ -191,18 +192,11 @@
                                 <li>бесплатная доставка</li>
                                 <li>любой объект по Москве</li>
                             </ul>
-                            <p>
-                                <input id="stamp1" name="stamp" type="radio" value="С печатью" checked="checked"><input id="stamp2" name="stamp" type="radio" value="Без печати">
-                                <label for="stamp1">С печатью</label>/ <label for="stamp2">Без печати</label>
-                            </p>
+                            <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                             <strong>3000 ₽</strong>
-                            <input type="hidden" name="service-name" value="Выписка из ЕГР об объекте недвижимости">
-                            <input type="hidden" name="service-price" value="3000">
 
-
-                            <a class="myBtn service-order" data-service-name="Выписка из ЕГР об объекте недвижимости" data-service-price="3000">Заказать</a>
+                            <a class="myBtn service-order" data-service-name="Выписка из ЕГР об объекте недвижимости" data-service-price="3000" data-stamp="С печатью">Заказать</a>
                         </div>
-                    </form>
                     <div class="service-frame flex-1-3">
                         <img src="images/service-icon-4.png" width="170px" height="auto">
                         <div class="service-frame-headline">
@@ -213,9 +207,9 @@
                             <li>бесплатная доставка</li>
                             <li>указание стоимости на любую дату</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-2 stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>3000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГР о кадостровой стоимости" data-service-price="3000">Заказать</a>
+                        <a class="myBtn service-order" data-service-name="Выписка из ЕГР о кадостровой стоимости" data-service-price="3000" data-stamp="С печатью">Заказать</a>
                     </div>
                     <div class="service-frame flex-1-3">
                         <img src="images/service-icon-5.png" width="170px" height="auto">
@@ -227,10 +221,10 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>3000 ₽</strong>
 
-                        <a class="myBtn service-order" data-service-name="Выписка домовой книги архивная/из домовой книги" data-service-price="3000">Заказать</a>
+                        <a class="myBtn service-order" data-service-name="Выписка домовой книги архивная/из домовой книги" data-service-price="3000" data-stamp="С печатью">Заказать</a>
                     </div>
                 </div>
                 <div class="row">
@@ -244,7 +238,7 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>8000 ₽</strong>
                         <a href="#" class="service-order">Заказать</a>
                     </div>
@@ -270,9 +264,9 @@
                         <ul class="service-frame-list">
                             <li>информация из реестра юридических лиц и индивидуальных предпренимателей</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>от 10000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРЮЛ и ЕГРИП" data-service-price="от 10000">Заказать</a>
+                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРЮЛ и ЕГРИП" data-service-price="от 10000" data-stamp="С печатью">Заказать</a>
                     </div>
                 </div>
             </div>
@@ -289,9 +283,9 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>3000 ₽</strong>
-                        <a href="#" class="service-order">Заказать</a>
+                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН об объекте недвижимости" data-service-price="3000" data-stamp="С печатью">Заказать</a>
                     </div>
                     <div class="service-frame flex-1-3">
                         <img src="images/service-icon-2.png" width="170px" height="auto">
@@ -303,7 +297,7 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>3000 ₽</strong>
                         <a href="#" class="service-order">Заказать</a>
                     </div>
@@ -317,9 +311,9 @@
                             <li>бесплатная доставка</li>
                             <li>о наличии/отсутствии недвижимости</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>3000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН об объекте недвижимости" data-service-price="3000">Заказать</a>
+                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН об объекте недвижимости" data-service-price="3000" data-stamp="С печатью">Заказать</a>
                     </div>
                 </div>
 
@@ -334,9 +328,9 @@
                             <li>бесплатная доставка</li>
                             <li>указание стоимости на любую дату</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>3000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН о кадостровой стоимости" data-service-price="3000">Заказать</a>
+                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН о кадостровой стоимости" data-service-price="3000" data-stamp="С печатью">Заказать</a>
                     </div>
                     <div class="service-frame flex-1-3">
                         <img src="images/service-icon-5.png" width="170px" height="auto">
@@ -348,9 +342,9 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>от 5500 ₽</strong>
-                        <a href="#" class="service-order">Заказать</a>
+                        <a class="myBtn service-order" data-service-name="Выписка домовой книги архивная/из домовой книги" data-price="от 5500" data-stamp="С печатью">Заказать</a>
                     </div>
                     <div class="service-frame flex-1-3">
                         <img src="images/service-icon-6.png" width="170px" height="auto">
@@ -362,9 +356,9 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>9000 ₽ + пошлина*</strong>
-                        <a class="myBtn service-order" data-service-name="Документы БТИ технический паспорт поэтажный план и экспликация" data-service-price="8000">Заказать</a>
+                        <a class="myBtn service-order" data-service-name="Документы БТИ технический паспорт поэтажный план и экспликация" data-service-price="9000 + пошлина" data-stamp="С печатью">Заказать</a>
                     </div>
                 </div>
 
@@ -391,9 +385,9 @@
                         <ul class="service-frame-list">
                             <li>информация из реестра юридических лиц и индивидуальных предпренимателей</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>от 10000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРЮЛ и ЕГРИП" data-service-price="от 10000">Заказать</a>
+                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРЮЛ и ЕГРИП" data-service-price="от 10000" data-stamp="С печатью">Заказать</a>
                     </div>
                 </div>
             </div>
@@ -410,9 +404,9 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>4000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН об объекте недвижимости" data-service-price="4000">Заказать</a>
+                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН об объекте недвижимости" data-service-price="4000" data-stamp="С печатью">Заказать</a>
                     </div>
                     <div class="service-frame flex-1-3">
                         <img src="images/service-icon-2.png" width="170px" height="auto">
@@ -424,9 +418,9 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>6000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН о переходе прав" data-service-price="6000">Заказать</a>
+                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН о переходе прав" data-service-price="6000" data-stamp="С печатью">Заказать</a>
                     </div>
                     <div class="service-frame flex-1-3">
                         <img src="images/service-icon-3.png" width="170px" height="auto">
@@ -438,9 +432,9 @@
                             <li>бесплатная доставка</li>
                             <li>о наличии/отсутствии недвижимости</li>
                         </ul>
-                        <p><a href="#">С печатью</a>/<a> Без печати</a></p>
+                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
                         <strong>3000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН о правах отдельного лицав" data-service-price="3000">Заказать</a>
+                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН о правах отдельного лицав" data-service-price="3000" data-stamp="С печатью">Заказать</a>
                     </div>
                 </div>
             </div>
@@ -506,9 +500,13 @@
 
         <footer>
             <div class="row">
-                <div class="footer-logo">
-                    <img src="images/logo.png" height="133px" width="138px" align="left">
-                    <span class="text-around-logo">Срочные выписки и справки по недвижимости</span>
+                <div class="footer-logo flex-1-2">
+                    <img src="images/logo.png" height="100px" width="100px">
+                </div>
+                <div class="footer-links flex-1-2">
+                    <a class="phone-link" href="tel:+74951111106">+7 (495) 111-11-06</a>
+                    <br>
+                    <a class="mail-link" href="mailto: zakaz@egrn.expert">zakaz@egrn.expert</a>
                 </div>
             </div>
         </footer>
