@@ -1,25 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,cyrillic-ext,latin-ext');
 @font-face {
-    font-family: "AvenirNext-Regular";
+    font-family: "AvenirNext";
     src: url(../fonts/AvenirNext-Regular.ttf);
 }
 @font-face {
-    font-family: "AvenirNext-DemiBold";
+    font-family: "AvenirNext";
+    font-weight: bold;
     src: url(../fonts/AvenirNext-DemiBold.ttf);
 }
-/*@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');*/
 
-/*@import url('https://fonts.googleapis.com/css?family=Lobster|Open+Sans&subset=cyrillic,cyrillic-ext,latin-ext');*/
-
-@import url('../fonts/muller/stylesheet.css');
-
-
-.ff-muller {
-    font-family: Muller, "Open Sans", Arial, sans-serif;
-}
 .ff-open-sans {
-    font-family: 'Open Sans', sans-serif; /* Добавляем для ценника */
+    font-family: 'Open Sans', sans-serif;
 }
 .ff-lobster{
     font-family: 'Lobster', cursive;
@@ -358,36 +350,33 @@ header {
 }
 .regions {
     text-align: center;
-}
-.regions {
     display: inline-flex;
     background: #ebebeb;
-    border-radius: 12px;
+    border-radius: 30px;
     padding: 0 7px;
 }
 .choose-region {
-    padding:0 60px;
     font-weight: bold;
+    border-radius: 30px;
+    padding:10px 60px;
+    text-decoration: none;
+    color: #000000;
 }
 .choose-region:hover, .choose-region:focus {
     background: #118eb9;
-    border-radius: 12px;
     color: #ffffff;
-    padding:0 60px;
 }
-.moscow.active , .mo.active , .other.active {
+.choose-region.active {
     background: #118eb9;
-    border-radius: 12px;
     color: #ffffff;
-    padding:0 60px;
 }
 
 
 
-.group-moscow, .group-mo, .group-other {
+.documents-group {
     display: none;
 }
-.group-moscow.active, .group-mo.active, .group-other.active {
+.documents-group.active {
     display: block;
 }
 
@@ -401,7 +390,7 @@ header {
     border: 1px solid #787878;
     color: #05232a;
     margin: 20px 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     align-items: center;
     justify-items: center;
 }
@@ -427,6 +416,8 @@ header {
 .service-frame-list {
     text-align: center;
     color: #646464;
+    margin: 20px 0;
+    padding: 0;
 }
 
 input[type=radio] {
@@ -554,6 +545,8 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
 .review-headline {
     text-align: center;
     padding-top: 70px;
+    font-size: 35px;
+    font-weight: 200;
 }
 .reviews {
     justify-content: center;

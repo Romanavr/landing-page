@@ -1,0 +1,5 @@
+[Sat Apr 22 2017 20:17:34 GMT+0300 (RTZ 2 (зима))] layer "+ пошлина*": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Sat Apr 22 2017 20:17:34 GMT+0300 (RTZ 2 (зима))] layer "+7 (495) 111-11-06 zakaz@egrn.expert ": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Sat Apr 22 2017 20:17:34 GMT+0300 (RTZ 2 (зима))] layer "+7 (495) 111-11-06 zakaz@egrn.expert с 09:00 до 23:00 ежедневно": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Sat Apr 22 2017 20:17:34 GMT+0300 (RTZ 2 (зима))] layer "+7 (495) 111-11-06": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Sat Apr 22 2017 20:17:35 GMT+0300 (RTZ 2 (зима))] layer "Red-arrow-test.svg": Fonts may render inconsistently and text wrapping is unsupported which can result in clipped text. Convert text to a shape to maintain fidelity.

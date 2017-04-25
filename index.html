@@ -141,7 +141,9 @@
             <h3 class="service-sub-headline">Официальные выписки и справки по объектам недвижимости по:</h3>
             <div style="text-align: center">
                 <div class="regions">
-                    <a class="choose-region moscow active">Москва</a><a class="choose-region mo">Московская область</a><a class="choose-region other">Другие регионы</a>
+                    <a href="#moscow" class="choose-region js-documents-tab active">Москва</a>
+                    <a href="#mo" class="choose-region js-documents-tab">Московская область</a>
+                    <a href="#other" class="choose-region js-documents-tab">Другие регионы</a>
                 </div>
             </div>
 
@@ -180,9 +182,9 @@
                 <!-- Modal content END -->
             </div>
 
-            <div class="group-moscow active">
+            <div id="moscow" class="documents-group active">
                 <div class="row">
-                        <div class="service-frame flex-1-3">
+                        <form class="service-frame flex-1-3">
                             <img src="images/service-icon-1.png" width="170px" height="auto">
                             <div class="service-frame-headline">
                                 <h4>Выписка из ЕГРН</h4>
@@ -192,12 +194,15 @@
                                 <li>бесплатная доставка</li>
                                 <li>любой объект по Москве</li>
                             </ul>
-                            <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                            <strong>3000 ₽</strong>
+                            <p><a class="stamp-true active" data-type="С печатью" data-type-price="3000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="3200">Без печати</a></p>
+                            <strong><span class="js-service-form-price">3000</span> ₽</strong>
 
-                            <a class="myBtn service-order" data-service-name="Выписка из ЕГР об объекте недвижимости" data-service-price="3000" data-stamp="С печатью">Заказать</a>
-                        </div>
-                    <div class="service-frame flex-1-3">
+                            <input type="hidden" name="service-price" value="3000">
+                            <input type="hidden" name="service-name" value="Выписка из ЕГРН об объекте недвижимости">
+                            <input type="hidden" name="stamp" value="С печатью">
+                            <button type="submit" class="myBtn service-order">Заказать</button>
+                        </form>
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-4.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Выписка из ЕГРН</h4>
@@ -207,11 +212,15 @@
                             <li>бесплатная доставка</li>
                             <li>указание стоимости на любую дату</li>
                         </ul>
-                        <p><a class="stamp-2 stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>3000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГР о кадостровой стоимости" data-service-price="3000" data-stamp="С печатью">Заказать</a>
-                    </div>
-                    <div class="service-frame flex-1-3">
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="3000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="3200">Без печати</a></p>
+
+                        <input type="hidden" name="service-price" value="3000">
+                        <input type="hidden" name="service-name" value="Выписка из ЕГРН о кадостровой стоимости">
+                        <input type="hidden" name="stamp" value="С печатью">
+                        <strong><span class="js-service-form-price">3000</span> ₽</strong>
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-5.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Выписка домовой книги</h4>
@@ -221,14 +230,18 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>3000 ₽</strong>
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="3000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="3200">Без печати</a></p>
+                        <strong><span class="js-service-form-price">3000</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="3000">
+                        <input type="hidden" name="service-name" value="Выписка домовой книги архивная/из домовой книги">
+                        <input type="hidden" name="stamp" value="С печатью">
 
-                        <a class="myBtn service-order" data-service-name="Выписка домовой книги архивная/из домовой книги" data-service-price="3000" data-stamp="С печатью">Заказать</a>
-                    </div>
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
                 </div>
+
                 <div class="row">
-                    <div class="service-frame flex-1-3">
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-6.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Документы БТИ</h4>
@@ -238,11 +251,15 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>8000 ₽</strong>
-                        <a href="#" class="service-order">Заказать</a>
-                    </div>
-                    <div class="service-frame flex-1-3">
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="8000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="8200">Без печати</a></p>
+                        <strong><span class="js-service-form-price">8000</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="8000">
+                        <input type="hidden" name="service-name" value="Документы БТИ технический паспорт поэтажный план и экспликация<">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-7.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Регистрация сделок с недвижимостью</h4>
@@ -253,10 +270,14 @@
                             <li>подача документов в РОСРЕЕСТР</li>
                         </ul>
                         <p></p>
-                        <strong>от 9000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Документы БТИ технический паспорт поэтажный план и экспликация" data-service-price="8000">Заказать</a>
-                    </div>
-                    <div class="service-frame flex-1-3">
+                        <strong><span class="js-service-form-price">от 9000</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="9000">
+                        <input type="hidden" name="service-name" value="Регистрация сделок с недвижимостью">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-8.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Выписка из ЕГРЮЛ и ЕГРИП</h4>
@@ -264,16 +285,20 @@
                         <ul class="service-frame-list">
                             <li>информация из реестра юридических лиц и индивидуальных предпренимателей</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>от 10000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРЮЛ и ЕГРИП" data-service-price="от 10000" data-stamp="С печатью">Заказать</a>
-                    </div>
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="от 10000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="от 10200">Без печати</a></p>
+                        <strong><span class="js-service-form-price">от 10000</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="от 10000">
+                        <input type="hidden" name="service-name" value="Выписка из ЕГРЮЛ и ЕГРИП">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
                 </div>
             </div>
 
-            <div class="group-mo">
+            <div id="mo" class="documents-group">
                 <div class="row">
-                    <div class="service-frame flex-1-3">
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-1.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Выписка из ЕГРН</h4>
@@ -283,11 +308,15 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>3000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН об объекте недвижимости" data-service-price="3000" data-stamp="С печатью">Заказать</a>
-                    </div>
-                    <div class="service-frame flex-1-3">
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="3000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="3200">Без печати</a></p>
+                        <strong><span class="js-service-form-price">3000</span> ₽</strong>
+
+                        <input type="hidden" name="service-price" value="3000">
+                        <input type="hidden" name="service-name" value="Выписка из ЕГРН об объекте недвижимости">
+                        <input type="hidden" name="stamp" value="С печатью">
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-2.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Выписка из ЕГРН</h4>
@@ -297,11 +326,15 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>3000 ₽</strong>
-                        <a href="#" class="service-order">Заказать</a>
-                    </div>
-                    <div class="service-frame flex-1-3">
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="3000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="3200">Без печати</a></p>
+                        <strong><span class="js-service-form-price">3000</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="3000">
+                        <input type="hidden" name="service-name" value="Выписка из ЕГРН о переходе прав">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-3.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Выписка из ЕГРН</h4>
@@ -311,14 +344,18 @@
                             <li>бесплатная доставка</li>
                             <li>о наличии/отсутствии недвижимости</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>3000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН об объекте недвижимости" data-service-price="3000" data-stamp="С печатью">Заказать</a>
-                    </div>
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="3000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="3200">Без печати</a></p>
+                        <strong><span class="js-service-form-price">3000</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="3000">
+                        <input type="hidden" name="service-name" value="Выписка из ЕГРН о правах отдельного лица">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
                 </div>
 
                 <div class="row">
-                    <div class="service-frame flex-1-3">
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-4.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Выписка из ЕГРН</h4>
@@ -328,11 +365,15 @@
                             <li>бесплатная доставка</li>
                             <li>указание стоимости на любую дату</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>3000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН о кадостровой стоимости" data-service-price="3000" data-stamp="С печатью">Заказать</a>
-                    </div>
-                    <div class="service-frame flex-1-3">
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="3000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="3200">Без печати</a></p>
+                        <strong><span class="js-service-form-price">3000</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="3000">
+                        <input type="hidden" name="service-name" value="Выписка из ЕГРН о кадостровой стоимости">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-5.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Выписка домовой книги</h4>
@@ -342,11 +383,16 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>от 5500 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка домовой книги архивная/из домовой книги" data-price="от 5500" data-stamp="С печатью">Заказать</a>
-                    </div>
-                    <div class="service-frame flex-1-3">
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="от 5500">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="от 5520">Без печати</a></p>
+                        <strong><span class="js-service-form-price">от 5500</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="от 5500">
+                        <input type="hidden" name="service-name" value="Выписка домовой книги архивная/из домовой книги">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
+
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-6.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Документы БТИ</h4>
@@ -356,14 +402,18 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>9000 ₽ + пошлина*</strong>
-                        <a class="myBtn service-order" data-service-name="Документы БТИ технический паспорт поэтажный план и экспликация" data-service-price="9000 + пошлина" data-stamp="С печатью">Заказать</a>
-                    </div>
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="от 9000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="от 9200">Без печати</a></p>
+                        <strong><span class="js-service-form-price">9000</span> ₽ + пошлина*</strong>
+                        <input type="hidden" name="service-price" value="9000">
+                        <input type="hidden" name="service-name" value="Документы БТИ технический паспорт поэтажный план и экспликация">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
                 </div>
 
                 <div class="row">
-                    <div class="service-frame flex-1-3">
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-7.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Регистрация сделок с недвижимостью</h4>
@@ -374,10 +424,14 @@
                             <li>подача документов в РОСРЕЕСТР</li>
                         </ul>
                         <p></p>
-                        <strong>от 9000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Регистрация сделок с недвижимостью" data-service-price="от 9000">Заказать</a>
-                    </div>
-                    <div class="service-frame flex-1-3">
+                        <strong><span class="js-service-form-price">от 9000</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="от 9000">
+                        <input type="hidden" name="service-name" value="Регистрация сделок с недвижимостью">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-8.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Выписка из ЕГРЮЛ и ЕГРИП</h4>
@@ -385,16 +439,21 @@
                         <ul class="service-frame-list">
                             <li>информация из реестра юридических лиц и индивидуальных предпренимателей</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>от 10000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРЮЛ и ЕГРИП" data-service-price="от 10000" data-stamp="С печатью">Заказать</a>
-                    </div>
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="от 10000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="от 10200">Без печати</a></p>
+                        <strong><span class="js-service-form-price">от 10000</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="от 10000">
+                        <input type="hidden" name="service-name" value="Выписка из ЕГРЮЛ и ЕГРИП">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
                 </div>
             </div>
 
-            <div class="group-other">
+            <div id="other" class="documents-group">
+
                 <div class="row">
-                    <div class="service-frame flex-1-3">
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-1.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Выписка из ЕГРН</h4>
@@ -404,11 +463,15 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>4000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН об объекте недвижимости" data-service-price="4000" data-stamp="С печатью">Заказать</a>
-                    </div>
-                    <div class="service-frame flex-1-3">
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="4000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="4200">Без печати</a></p>
+                        <strong><span class="js-service-form-price">4000</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="4000">
+                        <input type="hidden" name="service-name" value="Выписка из ЕГРН об объекте недвижимости">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-2.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Выписка из ЕГРН</h4>
@@ -418,11 +481,15 @@
                             <li>бесплатная доставка</li>
                             <li>любой объект по Москве</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>6000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН о переходе прав" data-service-price="6000" data-stamp="С печатью">Заказать</a>
-                    </div>
-                    <div class="service-frame flex-1-3">
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="6000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="6200">Без печати</a></p>
+                        <strong><span class="js-service-form-price">6000</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="6000">
+                        <input type="hidden" name="service-name" value="Выписка из ЕГРН о переходе прав">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
+                    <form class="service-frame flex-1-3">
                         <img src="images/service-icon-3.png" width="170px" height="auto">
                         <div class="service-frame-headline">
                             <h4>Выписка из ЕГРН</h4>
@@ -432,10 +499,14 @@
                             <li>бесплатная доставка</li>
                             <li>о наличии/отсутствии недвижимости</li>
                         </ul>
-                        <p><a class="stamp-true active" data-stamp="С печатью">С печатью</a>/ <a class="stamp-false" data-stamp="Без печати">Без печати</a></p>
-                        <strong>3000 ₽</strong>
-                        <a class="myBtn service-order" data-service-name="Выписка из ЕГРН о правах отдельного лицав" data-service-price="3000" data-stamp="С печатью">Заказать</a>
-                    </div>
+                        <p><a class="stamp-true active" data-type="С печатью" data-type-price="3000">С печатью</a>/ <a class="stamp-false" data-type="Без печати" data-type-price="3200">Без печати</a></p>
+                        <strong><span class="js-service-form-price">3000</span> ₽</strong>
+                        <input type="hidden" name="service-price" value="3000">
+                        <input type="hidden" name="service-name" value="Выписка из ЕГРН о правах отдельного лица">
+                        <input type="hidden" name="stamp" value="С печатью">
+
+                        <button type="submit" class="myBtn service-order">Заказать</button>
+                    </form>
                 </div>
             </div>
 
