@@ -19,8 +19,11 @@ jQuery(document).ready(function() {
                 $("#myModal input[name='service-price']").val(formData.get("service-price"));
                 $("#myModal input[name='stamp']").val(formData.get("stamp"));
 
-
                 return false;
+        });
+
+        $(".modal-close").click(function () {
+                $("#myModal").hide();
         });
 
         $("[data-type]").click(function() {
