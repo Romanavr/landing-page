@@ -1,15 +1,13 @@
 ymaps.ready(function () {
-    // 37.632726, 55.758809), 15);
-
     var myMap = new ymaps.Map('YMapsID', {
-        center: [55.758809, 37.632726],
-        zoom: 15,
-        behaviors: ['default']
-    }, {
-        searchControlProvider: 'yandex#search'
-    }),
+            center: [55.758809, 37.632726],
+            zoom: 15,
+            behaviors: ['default']
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
 
-    // Создание макета балуна на основе Twitter Bootstrap.
+        // Создание макета балуна на основе Twitter Bootstrap.
         MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
             '<div class="popover top">' +
             // '<a class="close" href="#">&times;</a>' +
@@ -57,7 +55,7 @@ ymaps.ready(function () {
                 onSublayoutSizeChange: function () {
                     MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
 
-                    if(!this._isElement(this._$element)) {
+                    if (!this._isElement(this._$element)) {
                         return;
                     }
 
@@ -99,7 +97,7 @@ ymaps.ready(function () {
                  * @returns {Number[][]} Координаты левого верхнего и правого нижнего углов шаблона относительно точки привязки.
                  */
                 getShape: function () {
-                    if(!this._isElement(this._$element)) {
+                    if (!this._isElement(this._$element)) {
                         return MyBalloonLayout.superclass.getShape.call(this);
                     }
 
@@ -131,7 +129,7 @@ ymaps.ready(function () {
             '<div class="popover-content">$[properties.balloonContent]</div>'
         ),
 
-    // Создание метки с пользовательским макетом балуна.
+        // Создание метки с пользовательским макетом балуна.
         myPlacemark = window.myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
             balloonHeader: 'Москва',
             balloonContent: "Никольная дом 10 стр.2, офис 315. <p><a class='map-tel-link' href='tel: +7-495-111-11-06'><i style='color: #d62026' class='fa fa-phone'></i> <strong>+7 (495) 111-11-06</strong></a></p>"
@@ -149,7 +147,7 @@ ymaps.ready(function () {
 
             hideIcon: false,
 
-            balloonOffset: [70,-70],
+            balloonOffset: [70, -70],
             balloonShadow: false,
             balloonLayout: MyBalloonLayout,
             balloonContentLayout: MyBalloonContentLayout,
