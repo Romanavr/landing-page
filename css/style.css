@@ -437,11 +437,21 @@ header {
 }
 
 .documents-group {
-    display: none;
+    /*display: none;*/
+    visibility: hidden;
+    transition:opacity 1s ease-out;
+    opacity: 0;
+    position: absolute;
+    left: -5000px;
+    top: -5000px;
 }
 
 .documents-group.active {
-    display: block;
+    /*display: block;*/
+    /*transition: opacity 1s ease-out; */
+
+    opacity: 1;    visibility: visible;
+    position: static;
 }
 
 .service-frame {
@@ -479,6 +489,7 @@ header {
     font-size: 22px;
     margin-top: auto;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .service-frame-list {
@@ -663,13 +674,15 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
 }
 
 .comment-text {
-    padding: 0 30px;
+    padding: 15px 30px;
 }
 
 .comment-icon {
     position: absolute;
-    left: 160px;
-    bottom: -85px;
+    left: 165px;
+    bottom: -110px;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
 }
 
 /** MAP **/
