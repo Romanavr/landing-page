@@ -121,6 +121,10 @@ section {
 .row {
     display: flex;
 }
+.row-service {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .flex-1-2 {
     flex-basis: 50%;
@@ -178,7 +182,7 @@ header {
     white-space: normal;
 }
 
-.header-logo {
+.header-logo, .footer-logo {
     margin-left: 60px;
     display: flex;
     align-items: center;
@@ -315,6 +319,7 @@ header {
     background: #cfd2d2;
     width: 250px;
     padding: 9px 10px;
+    font-size: 18px;
 }
 
 .user-field > label > input:focus {
@@ -441,7 +446,8 @@ header {
 
 .service-frame {
     display: flex;
-    flex: 1 0 auto;
+    /*flex: 1 0 auto;*/
+    flex-basis: 25%;
     flex-direction: column;
     width: 360px;
     border: 1px solid #9a9a9a;
@@ -581,6 +587,7 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
     width: 200px;
     margin: 50px 10px;
     padding: 10px;
+    font-size: 18px;
 }
 
 .order-form > input:focus {
@@ -744,7 +751,7 @@ footer {
 
 /* MEDIA QUERIES */
 
-/** MEDIMUM **/
+/** LARGE **/
 @media (max-width: 1200px) {
     .feedback-adaptive {
         flex-direction: column;
@@ -802,9 +809,16 @@ footer {
 
 }
 
+/** MEDIMUM **/
+@media(max-width: 992px) {
+    .row-service {
+        justify-content: center;
+    }
+}
+
 /** SMALL **/
 @media (max-width: 768px) {
-    .row {
+    .row, .row-service {
         flex-direction: column;
         align-items: center;
     }
@@ -814,7 +828,7 @@ footer {
         flex-basis: auto;
     }
 
-    .header-logo {
+    .header-logo, .footer-logo {
         flex-direction: column;
         margin: 0;
     }
@@ -845,6 +859,9 @@ footer {
         flex-direction: column;
     }
 
+    .service-frame {
+        width: 70%;
+    }
     .service-frame-list {
         text-align: left;
     }
