@@ -456,7 +456,6 @@ header {
 
 .service-frame {
     display: flex;
-    /*flex: 1 0 auto;*/
     flex-basis: 25%;
     flex-direction: column;
     width: 360px;
@@ -874,6 +873,7 @@ footer {
 
     .service-frame {
         width: 70%;
+        flex-basis: auto;
     }
     .service-frame-list {
         text-align: left;
