@@ -141,7 +141,14 @@ section {
 
 .work-order-item {
     position: relative;
-    padding: 0 30px;
+    padding: 0 20px;
+}
+
+.work-order-item-title {
+    font-weight: normal;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .work-order-item-icon:after {
@@ -180,6 +187,7 @@ header {
     font-size: 20px;
     text-transform: uppercase;
     white-space: normal;
+    margin-left: 15px;
 }
 
 .header-logo, .footer-logo {
@@ -267,9 +275,7 @@ header {
 
 .contact-form {
     width: 395px;
-    height: 540px;
     position: relative;
-    /*left: 35px;*/
     bottom: 13px;
     background: #ffffff;
     border: 1px solid #000000;
@@ -311,6 +317,7 @@ header {
     display: block;
     font-size: 15px;
     color: #9a9a9a;
+    margin-bottom: 3px;
 }
 
 .user-field > label > input {
@@ -340,7 +347,8 @@ header {
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 30px auto;
+    margin-top: 15px;
+    margin-bottom: 45px;
 }
 
 .receive:hover, .receive:focus {
@@ -397,6 +405,10 @@ header {
 }
 
 /** SERVICES **/
+.services {
+    padding-bottom: 40px;
+}
+
 .service-headline {
     text-align: center;
     padding-top: 50px;
@@ -465,6 +477,7 @@ header {
     padding: 20px;
     align-items: center;
     justify-items: center;
+    font-size: 18px;
 }
 
 .service-frame > img {
@@ -546,6 +559,7 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
     font-weight: bold;
     padding: 10px 60px;
     margin-top: auto;
+    margin-bottom: 20px;
 }
 
 .service-order:hover, .service-order:focus {
@@ -569,6 +583,8 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
 
 .feedback-order-headline > h2 {
     padding-top: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 34px;
     margin-top: 0;
     margin-bottom: 15px;
@@ -578,13 +594,13 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
     margin-top: 0;
     margin-bottom: 30px;
     font-weight: normal;
+    padding: 0 15px;
 }
 
 .order-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     margin: 0 30px;
 }
 
@@ -649,7 +665,7 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
 /** REVIEWS **/
 .review {
     background: #f5f5f5;
-    padding-bottom: 30px;
+    padding-bottom: 70px;
 }
 
 .review-headline {
@@ -689,6 +705,7 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    overflow: hidden;
 }
 
 .map-info {
@@ -729,7 +746,7 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
     background: #ffffff;
     margin: 0;
     text-align: center;
-    padding: 20px 20px 0 20px;
+    padding: 30px 30px 0 30px;
     opacity: 0.8;
 }
 
@@ -737,7 +754,7 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
     background: #ffffff;
     margin: 0;
     text-align: center;
-    padding: 0 20px 20px 20px;
+    padding: 0 30px 30px 30px;
     opacity: 0.8;
 }
 
@@ -764,7 +781,7 @@ footer {
 /* MEDIA QUERIES */
 
 /** LARGE **/
-@media (max-width: 1200px) {
+@media (max-width: 1260px) {
     .feedback-adaptive {
         flex-direction: column;
         align-items: center;
@@ -791,7 +808,7 @@ footer {
     }
 
     .overlay-text {
-        padding: 0;
+        padding: 0 10px;
     }
 
     .work-order-images {
@@ -807,18 +824,23 @@ footer {
         flex-basis: 50%;
     }
 
-    .order-form {
-        padding-bottom: 30px;
-    }
-
-    .order-form > input {
-        margin: 20px 10px;
-    }
-
     .flex-1-6 {
         flex-basis: 31%;
     }
 
+    .order-form {
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+    }
+
+    .order-form > * {
+        flex-basis: 100%;
+    }
+
+    .order-form > input {
+        margin: 20px 0;
+        width: 100%;
+    }
 }
 
 /** MEDIMUM **/

@@ -13,7 +13,7 @@ ymaps.ready(function () {
             // '<a class="close" href="#">&times;</a>' +
             '<div class="arrow"></div>' +
             '<div class="popover-inner">' +
-            '$[[options.contentLayout observeSize minWidth=235 maxWidth=235 maxHeight=350 background=#fff]]' +
+            '$[[options.contentLayout observeSize minWidth=300 maxWidth=235 maxHeight=350 background=#fff]]' +
             '</div>' +
             '</div>', {
                 /**
