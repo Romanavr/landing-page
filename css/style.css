@@ -591,8 +591,7 @@ label[for=stamp1]:hover, label[for=stamp2]:hover {
 }
 
 .feedback-order-headline > h3 {
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin: 0;
     font-weight: normal;
     padding: 0 15px;
 }
